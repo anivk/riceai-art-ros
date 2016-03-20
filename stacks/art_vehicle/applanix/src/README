@@ -1,2 +1,4 @@
 Files
 applanix.cc -- interfaces with GPS system whether that be DGPS or WGS-x64
+applanix.h -- interface applanix coordinate and orientation system for land
+              vehicles. Looks like it uses some software from Velodyne
