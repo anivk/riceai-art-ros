@@ -1,0 +1,9 @@
+UTM.h -- converts between lat/long and Universal Transverse Mercator Coordinates (UTM
+conversions.h -- holds some very simple unit conversion aids and converts between unts
+epsilon.h -- holds some error difference trhesholds for calculations. Also has an Almost Equal function
+              using these error values, but is not recommeneded to use
+filter.h -- uses an exponentially weighte moving average filter smoothing function following recurrence: a*x_k + (1-a)*y_{k-1}
+            the closer a is to zero the greater smoothing effect and the less responsive the smoothing. Uses number of periods to
+            prevent over-reliance on early observations
+frames.h -- creates frames of reference from Earth to cameras and transforms parameters to new frames
+infinity.h -- constants to represent infinity
