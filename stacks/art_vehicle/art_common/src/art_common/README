@@ -1,0 +1,11 @@
+All files here seem to do the same things as their C counterparts
+
+pid.py -- PID (Proportional, Integral, Derivative) control output., dont really understand it). It may be worth to look at it a bit later. For now, I don't think we really need to worry about it.
+
+steering.py -- calculates steering angle (in degrees) for a given speed and yawrate using the bicycle method. This means the two front wheels are abstracted into one single wheel. We examine the car as a triange where there is a point at the center of the vehicle's turnig circle (A), at the midpoint of the the rear axle (B), and at the midpoint of the front axle (C), where AB is the radius of the turning circle. This is a right triangle where the hypotnuse is line segment AC. From this triangle, the measure of angle BAC equals the measure of the angle between the midline of the vehicle and the front wheel. From this we glean a few ewuations:
+  --> tan(steering angle) = BC/AB = a/r where a is length of the vehicle
+We can also estimate radius (r) for a given yawspeed (y), konwn as rotational velocity, assuming constant velocity (v):
+  --> y = (2*pi radians) / (2*pi*r/v seconds)
+  --> y = v/r radians/second
+  --> r = v/y
+Using these equations this code has functions for calculating the steer degrees suing yawspeed, velocity and length,, and a function to do the inverse: calculate yawspee using steer degrees, velocity, length. At the end the code calculates max yaw using the steer speed minimum and the max steer degrees of the vehicle.
