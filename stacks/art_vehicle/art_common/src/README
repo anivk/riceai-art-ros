@@ -1,2 +1,3 @@
 vehicle_configurable_tf.cc -- a ROS node that broadcasts transforms from various devices to the vehicle frame of referen (look at frames.h for more information). Some ROS components require that every 10 seconds. Also provides a dynamic reconfigure environment to configure these transforms (not really sure what this means). From what I understand, it's basically broadcasting information about the vehicle like x,y,z, roll, pitch, yaw and derived values for other nodes to use.
+
 vehicle_static_tf.cc -- Does same thing as above except without the dynamic reconfigure environment (still not sure what it means).
