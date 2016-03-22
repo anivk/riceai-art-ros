@@ -1,0 +1,10 @@
+The first 4 launch files:
+  --> driver_node.launch
+  --> get_center_front.launch
+  --> get_left_front.launch
+  --> get_right_front.launch
+are just files to launch the specific amera drivers
+
+theora_view.launch -- the launch file for viewing a theora camera1294 stream. It first republishes with the theora compression then allows to view the theora images. Theora is a free and open video compression format from the Xiph.org Foundation. Theora scales from postage stamp to HD resolution, and is considered particularly competitive at low bitrates. It is in the same class as MPEG-4/DiVX, and like the Vorbis audio codec it has lots of room for improvement as encoder technology develops.
+
+view_cameras.launch -- Allows you to view the images of the three front cameras.
